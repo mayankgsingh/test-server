@@ -1,0 +1,4 @@
+{
+	"error": 400,
+	"desc": "This is a intented error returned from REST API."
+}

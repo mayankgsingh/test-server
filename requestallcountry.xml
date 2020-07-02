@@ -1,0 +1,7 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gs="http://www.testserver.com/springsoap/gen">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gs:getAllCountryRequest />
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.testserver.com/springsoap/gen" 
+	targetNamespace="http://www.testserver.com/springsoap/gen">
+
+	<xs:element name="getAllCountryRequest">
+	</xs:element>
+
+	<xs:element name="getAllCountryResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="country" type="tns:country" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getCountryRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="getCountryResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="country" type="tns:country"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:complexType name="country">
+    	<xs:sequence>
+    		<xs:element name="name" type="xs:string"></xs:element>
+    		<xs:element name="iso3" type="xs:string"></xs:element>
+    		<xs:element name="iso2" type="xs:string"></xs:element>
+    		<xs:element name="phone_code" type="xs:string"></xs:element>
+    		<xs:element name="capital" type="xs:string"></xs:element>
+    		<xs:element name="currency" type="xs:string"></xs:element>
+    		<xs:element name="states" type="tns:state" minOccurs="0" maxOccurs="unbounded">
+    		</xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="state">
+    	<xs:sequence>
+    		<xs:element name="id" type="xs:int"></xs:element>
+    		<xs:element name="name" type="xs:string"></xs:element>
+    		<xs:element name="state_code" type="xs:string"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
